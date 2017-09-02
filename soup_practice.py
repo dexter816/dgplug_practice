@@ -8,5 +8,5 @@ response =requests.get(page_url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 for lines in soup:
-    print(soup.find('http://'))
+    print(soup.find('a').get('href'))
 
